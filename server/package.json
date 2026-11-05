@@ -1,0 +1,40 @@
+{
+  "name": "@lumi/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "worker": "tsx src/worker.ts",
+    "cron": "tsx src/cron.ts",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/db/seed.ts",
+    "build": "tsc -p .",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1156.0",
+    "@aws-sdk/s3-request-presigner": "^3.1156.0",
+    "@fastify/cookie": "^11.1.3",
+    "@fastify/cors": "^11.3.1",
+    "@fastify/helmet": "^13.2.0",
+    "@fastify/multipart": "^10.1.6",
+    "@fastify/rate-limit": "^11.2.1",
+    "@fastify/static": "^10.1.7",
+    "@node-rs/argon2": "^2.2.2",
+    "bullmq": "^6.4.2",
+    "fastify": "^5.12.7",
+    "ioredis": "^6.0.0",
+    "onnxruntime-node": "^1.31.1",
+    "pg": "^8.23.1",
+    "pino": "^10.4.0",
+    "sharp": "^0.35.5",
+    "undici": "^8.12.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

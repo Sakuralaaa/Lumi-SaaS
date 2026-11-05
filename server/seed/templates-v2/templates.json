@@ -1,0 +1,642 @@
+[
+ {
+  "key": "core-white-main",
+  "file": "core-white-main.webp",
+  "title": "纯白主图",
+  "descr": "平台标准白底主图，商品占画面八成",
+  "category": "通用",
+  "purpose": "主图",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Marketplace-compliant main image. The product, exactly as in the reference photo and unmodified, sits centered on a seamless pure white (#FFFFFF) background and fills about 80-85% of the frame. Even, soft high-key studio lighting from a large overhead softbox and two side fills, no colour cast. A very subtle natural contact shadow directly beneath the product so it does not float. Straight-on three-quarter product angle, 85mm lens look, edge-to-edge sharp focus, crisp clean silhouette. No props, no other objects, no text, no badges, no border.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-macro-detail",
+  "file": "core-macro-detail.webp",
+  "title": "材质微距",
+  "descr": "放大材质与做工，突出品质细节",
+  "category": "通用",
+  "purpose": "细节",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Extreme close-up macro photograph of the product from the reference photo, unmodified, filling the frame so its surface texture, material grain, stitching, finish and fine craftsmanship are clearly visible. Very shallow depth of field: one key detail is razor sharp and the rest falls into a creamy soft blur. Raking side light grazes the surface to reveal texture, with a gentle warm rim light. Neutral dark warm-grey backdrop barely visible. 100mm macro lens look, rich true-to-life colour. No text, no props.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-callout-points",
+  "file": "core-callout-points.webp",
+  "title": "卖点标注",
+  "descr": "商品居中，四周标注三个卖点",
+  "category": "通用",
+  "purpose": "卖点",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：轻盈一整天",
+    "max": 12
+   },
+   {
+    "key": "points",
+    "label": "三个卖点",
+    "placeholder": "例：降噪 / 30小时续航 / 轻至4g",
+    "max": 30
+   }
+  ],
+  "scene": "Clean product infographic. The product from the reference photo, unmodified, stands large and centered on a soft light-grey to white gradient background with a gentle floor shadow. At the top, a bold modern sans-serif headline reads {headline}. Around the product, three slim callout labels connected by thin fine lines point to relevant parts of the product, the three labels reading the items in {points} (split by slashes), one item per label. Minimal, premium, generous spacing, consistent small icons are not needed. All other areas have no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-poster-headline",
+  "file": "core-poster-headline.webp",
+  "title": "大字海报",
+  "descr": "大标题加商品，直接可用的促销图",
+  "category": "通用",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：秋冬上新",
+    "max": 10
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：限时八折",
+    "max": 16
+   }
+  ],
+  "scene": "Bold editorial promotional poster. A solid saturated colour background chosen to complement the product's own colours, with a subtle paper grain. The product from the reference photo, unmodified, stands in the lower two-thirds as the hero with a soft drop shadow and a slight low camera angle that makes it feel monumental. Across the upper third, a very large, heavy display headline reads {headline}; below it, a smaller line reads {sub}. Strong graphic hierarchy, magazine-cover feel, crisp studio light. All other areas have no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-gift-box",
+  "file": "core-gift-box.webp",
+  "title": "礼盒开箱",
+  "descr": "商品放在打开的礼盒里，适合送礼季",
+  "category": "节日",
+  "purpose": "氛围",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Gift unboxing moment shot from a 45-degree angle. The product from the reference photo, unmodified, rests nestled in an open rigid gift box lined with ivory tissue paper; the lid leans beside it with a loose satin ribbon. Warm cozy evening light, soft bokeh fairy lights in the background, a few dried flowers and a small blank gift tag as set dressing on a linen tablecloth. Palette of cream, warm gold and deep red accents. The product is clearly the hero and sharply in focus. No text, no logos.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-explode-food",
+  "file": "core-explode-food.webp",
+  "title": "悬浮食材",
+  "descr": "商品周围飞散原料，强调真材实料",
+  "category": "食品",
+  "purpose": "卖点",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Dynamic high-speed food advertising shot. The product from the reference photo, unmodified, floats slightly tilted in the center against a warm deep-brown gradient background. Around it, the natural raw ingredients the product is made from (inferred from what the product is) burst outward and hang frozen in mid-air with fine particles and crumbs, arranged in a balanced spiral around the product without covering it. Strong warm key light from the upper left, crisp rim light, frozen motion, ultra sharp. Appetizing, premium. No text, no labels added.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-drink-splash",
+  "file": "core-drink-splash.webp",
+  "title": "冰爽水花",
+  "descr": "冰块与水花环绕，夏日饮品感",
+  "category": "食品",
+  "purpose": "氛围",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Refreshing summer beverage advertisement. The product from the reference photo, unmodified, stands upright in the center, covered in fine condensation droplets. A crown of crystal-clear water splash and a few ice cubes frozen mid-air surround its base, with slices of the matching fruit (inferred from the product) floating nearby. Bright cool backlight through the liquid, soft pastel gradient background in a colour that matches the product, high-speed photography look, sparkling highlights. No text added.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-tech-desk",
+  "file": "core-tech-desk.webp",
+  "title": "科技桌面",
+  "descr": "简洁桌面场景，数码产品质感",
+  "category": "数码",
+  "purpose": "场景",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Minimal modern workspace scene. The product from the reference photo, unmodified, sits as the hero in the foreground on a light oak desk, beside a closed laptop, a ceramic mug and a small plant softly blurred in the background. Soft diffused morning daylight from a large window on the left, gentle shadows, calm neutral palette of white, oak and sage. 50mm lens, shallow depth of field, product sharp. Clean lifestyle tech photography. No text, no screens showing content, no logos.",
+  "ratios": [
+   "4:3"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-neon-tech",
+  "file": "core-neon-tech.webp",
+  "title": "暗调光影",
+  "descr": "深色背景加边缘光，酷感科技风",
+  "category": "数码",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Dark premium tech product hero shot. The product from the reference photo, unmodified, rests on a glossy black reflective surface against a near-black background. Two slim coloured rim lights, cool cyan from one side and soft violet from the other, trace the product's silhouette, with a faint haze and a subtle reflection on the floor. Low camera angle, dramatic, sleek and futuristic but restrained. Product details stay readable and sharp. No text added.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-vanity",
+  "file": "core-vanity.webp",
+  "title": "梳妆台",
+  "descr": "温柔梳妆台场景，护肤彩妆适用",
+  "category": "美妆",
+  "purpose": "场景",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Soft feminine vanity scene. The product from the reference photo, unmodified, stands on a cream travertine tray on a vanity table, with a round mirror edge, a folded white towel and a small vase of pale flowers softly blurred behind. Warm golden-hour window light with gentle sheer-curtain diffusion, delicate shadows, palette of cream, blush and warm beige. 85mm lens, shallow depth of field, product crisp and centered. Calm, luxurious, clean. No text added.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-texture-swatch",
+  "file": "core-texture-swatch.webp",
+  "title": "质地涂抹",
+  "descr": "商品旁一抹质地，护肤品必备",
+  "category": "美妆",
+  "purpose": "细节",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Beauty texture shot from a slightly elevated angle. The product from the reference photo, unmodified, stands on a smooth pale stone surface; beside it, a generous elegant swipe and a few droplets of its own formula (cream, gel or serum, matching what the product is) show the texture in glossy detail. Soft diffused top light, subtle reflections, palette matched to the product's colours. Shallow depth of field, product and swatch both sharp. Clean, premium skincare advertising. No text added.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-ghost-mannequin",
+  "file": "core-ghost-mannequin.webp",
+  "title": "隐形模特",
+  "descr": "服装立体展示，不露人",
+  "category": "服饰",
+  "purpose": "主图",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Ghost mannequin apparel photo. The garment from the reference photo, unmodified in colour, pattern, knit and every detail, is shown as if worn by an invisible body: natural three-dimensional volume, open neckline showing the inner back, sleeves gently shaped. Centered on a seamless very light warm-grey background, soft even studio lighting with a faint shadow. Front view, garment fills about 80% of the frame, crisp fabric texture. No person, no mannequin visible, no hanger, no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-ugc-mirror",
+  "file": "core-ugc-mirror.webp",
+  "title": "对镜随拍",
+  "descr": "真实感对镜自拍，种草笔记风",
+  "category": "服饰",
+  "purpose": "场景",
+  "mode": "detailed",
+  "allowText": false,
+  "fields": [],
+  "scene": "Authentic social-media style mirror selfie. A young adult model wears the clothing items from the reference photos exactly as they are, completely and naturally dressed, standing in front of a tall mirror in a bright, tidy apartment bedroom with a linen bed and plants, holding a phone that partly covers the face. Natural daylight, slight casual imperfection, true-to-life colour, phone camera look with mild depth. Relaxed real pose. No text, no stickers, no logos.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-cozy-home",
+  "file": "core-cozy-home.webp",
+  "title": "温暖居家",
+  "descr": "放进真实家居角落的生活场景",
+  "category": "家居",
+  "purpose": "场景",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Warm lived-in home interior. The product from the reference photo, unmodified, is the hero on a wooden side table beside a soft boucle armchair, with a knitted throw, a stack of books and a ceramic vase softly out of focus. Late-afternoon sunlight falls through a window casting long gentle shadows, warm palette of cream, oak and terracotta. 35mm lens, eye-level, natural and inviting. Product sharp and clearly visible. No text added.",
+  "ratios": [
+   "4:3"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-velvet-jewel",
+  "file": "core-velvet-jewel.webp",
+  "title": "丝绒珠宝",
+  "descr": "深色丝绒与聚光，珠宝高级感",
+  "category": "珠宝",
+  "purpose": "氛围",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Luxury jewellery still life. The piece from the reference photo, unmodified, is laid gracefully on draped deep emerald velvet, with a small polished stone and soft folds leading the eye to it. A single narrow spotlight from above creates brilliant sparkles and highlights on the metal and gems while the surroundings fall into rich shadow. 100mm macro look, shallow depth of field, jewellery razor sharp. Elegant, high-end. No text added.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": true,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-seasonal-swap",
+  "file": "core-seasonal-swap.webp",
+  "title": "换季场景",
+  "descr": "一键换到秋冬或春夏氛围",
+  "category": "通用",
+  "purpose": "氛围",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Seasonal autumn still life. The product from the reference photo, unmodified, stands on a rustic wooden surface surrounded by fallen maple leaves, small pumpkins, a chunky knit scarf and a cup of warm drink with gentle steam. Warm low golden sunlight from the side, soft long shadows, palette of amber, rust and cream, cozy and inviting. 50mm lens, shallow depth of field, product sharp and dominant. No text added.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "core-size-guide",
+  "file": "core-size-guide.webp",
+  "title": "尺寸示意",
+  "descr": "商品加尺寸标注线，详情页常用",
+  "category": "通用",
+  "purpose": "卖点",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "points",
+    "label": "尺寸",
+    "placeholder": "例：高 12cm / 宽 8cm",
+    "max": 24
+   }
+  ],
+  "scene": "Clean technical size diagram. The product from the reference photo, unmodified, sits centered on a pure white background in a straight front view, filling about 65% of the frame. Thin dark-grey dimension lines with small end ticks run along its height and width just outside the silhouette, labelled with the measurements given in {points} (split by slashes), in a small neat sans-serif. Even soft lighting, faint floor shadow, precise and minimal. All other areas have no text.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": false,
+  "source": "Lumi 原创（场景参考 gpt-image2-ecommerce，MIT）"
+ },
+ {
+  "key": "sx-28885",
+  "file": "sx-28885.webp",
+  "title": "漂浮美食",
+  "descr": "高级工作室浮游海报",
+  "category": "食品",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "brand",
+    "label": "品牌名称",
+    "placeholder": "例：Lumi",
+    "max": 20
+   }
+  ],
+  "scene": "Clean studio or soft gradient background with professional commercial lighting, clear highlights, realistic shadows, and modern edited composition. The product from the reference photo stays unmodified, elegant and dynamic, floating gracefully above an exquisite plate or surface as the absolute hero. Add subtle floating elements such as crumbs, herbs, sauce, steam or decorative accents. Super realistic, appetizing, high-end suitable for social media with high product recognition. If brand text is provided, add minimal elegant sans-serif font brand information: {brand}. All other areas have no text. Generalised for any food or beverage product.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-25364",
+  "file": "sx-25364.webp",
+  "title": "悬浮中式",
+  "descr": "中式美食产品置于悬浮场景",
+  "category": "食品",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Vertical 9:16 cinematic black and gold food advertisement composition featuring the uploaded product photo of a dish as the central hero element placed unmodified in the lower half of the frame inside a dark ceramic bowl or black slate. Above it, dynamic layers of main ingredients and special ingredients float suspended with water droplets and specular highlights creating an explosive layered effect. Dramatic cinematic lighting with soft volumetric shadows and high contrast highlights, shallow depth of field, elegant Oriental aesthetic, ultra high detail food photography style with luxurious movie-like atmosphere and no text elements anywhere.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-27911",
+  "file": "sx-27911.webp",
+  "title": "低角度水滴",
+  "descr": "优雅低角度美妆摄影",
+  "category": "美妆",
+  "purpose": "细节",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "Create a dramatic low-angle product photography scene with the product bottle positioned on the sharp edge of a transparent glass pedestal. The product from the reference photo stays completely unmodified and serves as the central hero. Clear water streams elegantly cascade down the bottle and the glass surface, creating glistening reflections. A few juicy, glossy fresh fruits are artfully placed beside the bottle for added vibrancy. The deep wine-red background features a soft gradient lighting that fades towards the top, enhancing depth. Dramatic cinematic lighting with intense highlights and profound shadows builds a luxurious and sensual atmosphere. Highly detailed water droplets and reflective surfaces are emphasized, in the style of top-tier commercial beauty photography with sharp focus and photorealistic 8K quality. The composition uses a dynamic low perspective to create tension and elegance.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-35081",
+  "file": "sx-35081.webp",
+  "title": "薄荷护肤",
+  "descr": "薄荷绿奢华护肤海报",
+  "category": "美妆",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：水润一整天",
+    "max": 12
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：清新补水",
+    "max": 12
+   }
+  ],
+  "scene": "Minimalist luxury studio with smooth glass base. The product, a luxury skincare bottle, sits centrally as the hero element, exactly as in the uploaded photo with no modifications to its appearance, shape, or details. Semi-transparent bubbles float around the bottle, and flowing liquid silk ribbons wrap gently around it for a dynamic effect. Soft cinematic studio lighting from above and slightly left creates soft highlights and elegant reflections on the glossy surfaces. The background is clean and minimal with a soft gradient, no textures or distractions. High-end beauty advertising aesthetic with surreal 3D rendered quality. The composition is balanced and premium, focusing on the product's form and the fresh, revitalizing atmosphere. Elegant typography is overlaid in the layout: {headline} {sub}. All other areas have no text. Color palette features soft mint green tones, clean and refreshing with warm highlights. Photorealistic, ultra high detail, 8K quality, premium commercial look.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-33409",
+  "file": "sx-33409.webp",
+  "title": "白场巨字",
+  "descr": "纯白背景色块与巨字，产品居中",
+  "category": "通用",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "背景巨字",
+    "placeholder": "例：AIR",
+    "max": 8
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：轻盈一整天",
+    "max": 14
+   },
+   {
+    "key": "brand",
+    "label": "品牌名",
+    "placeholder": "例：LUMI",
+    "max": 10
+   }
+  ],
+  "scene": "Premium studio campaign poster on a pure matte white canvas. Behind the product from the reference photo sits one large rounded rectangle filling about seventy percent of the frame height, glowing with a smooth gradient from top-left to bottom-right in a single muted brand colour. A giant ultra-bold geometric sans-serif {headline} runs behind the product as a background layer — cropped by the frame edges, softly embossed, low contrast so it never competes with the subject. The product is photographed from a slight low hero angle, three-quarter view, photorealistic, unmodified, exact colour, finish and branding, standing as the clear hero with a soft contact shadow. Strict grid alignment, generous white space, a small {sub} line beneath and a tiny {brand} mark at the top. Even diffused studio lighting, crisp clean shadows. All other areas have no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-32760",
+  "file": "sx-32760.webp",
+  "title": "微境巨物",
+  "descr": "产品化身微缩电影世界的地标",
+  "category": "通用",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：声临其境",
+    "max": 12
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：为热爱而生",
+    "max": 18
+   }
+  ],
+  "scene": "A premium campaign poster built around the product from the reference photo as a monumental hero inside a miniature cinematic world. The product remains completely unmodified, sharp and visually dominant. Tiny human figures, miniature vehicles, architecture, lights, atmospheric haze and scale cues surround it, making it feel massive and iconic. Adapt the tiny world to the product category: an arena, temple, cityscape, monument, island or performance landscape. Cinematic commercial photography, realistic scale contrast, polished reflections, strong shadows, shallow depth of field, rich atmospheric depth. Large headline {headline} and supporting line {sub} are tastefully integrated; all other areas have no text, no brand logos.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-32310",
+  "file": "sx-32310.webp",
+  "title": "蓝调亚麻",
+  "descr": "蓝色极简场景衬托亚麻质感单品",
+  "category": "服饰",
+  "purpose": "主图",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "A minimalist fashion campaign image built around the product from the reference photo, which stays exactly as photographed and remains the hero. Present the product as a clean still-life subject against a seamless powder-blue studio backdrop with a subtle linen-weave texture. Soft diffused daylight from one side, gentle natural shadows and an airy, calm atmosphere. Simple geometric set elements and a low neutral plinth keep the composition spacious and editorial. Palette of powder blue, pale denim, ivory and soft grey. Camera at a slight three-quarter angle, sharp product detail, shallow depth of field, premium commercial photography. All areas have no text and no brand logos.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-34174",
+  "file": "sx-34174.webp",
+  "title": "椰奶奢境",
+  "descr": "椰奶泡沫环绕产品，热带奢华氛围",
+  "category": "美妆",
+  "purpose": "场景",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "A luxury beauty scene centered on the product from the reference photo, which stays exactly as photographed and remains the hero. The product sits on a minimal warm-toned pedestal surrounded by cracked coconuts, creamy milk splashes and soft foam clouds. Realistic translucent bubbles float in the background. Tropical spa atmosphere, creamy textures, high-end skincare campaign mood. Soft warm directional light, gentle highlights, subtle shadows, shallow depth of field. Camera at a slightly low three-quarter angle, product sharp in the center, splash frozen mid-air. Palette of ivory, coconut white, warm beige and soft gold. All other areas have no text and no brand logos.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": true,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-35135",
+  "file": "sx-35135.webp",
+  "title": "拉丝金属",
+  "descr": "拉丝金属台配柔光，右侧留白主图",
+  "category": "数码",
+  "purpose": "主图",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "The product from the reference photo rests on a slim brushed-metal riser, kept exactly as photographed with no alteration, clearly the hero of the composition. Behind it, a graphite-toned acoustic panel wall with a fine ribbed texture falls into soft shadow, while a folded piece of matte fabric adds a warm neutral accent at the edge. A large softbox from the left produces gentle directional light and a long, quiet gradient across the metal; subtle highlights define the product's edges. Shot on an 85mm lens at a slightly low tabletop angle, shallow depth of field, crisp product detail. Palette of graphite, gunmetal and warm beige. Off-centre placement with clean empty space on the right for cropping. No logos, no readable text.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-18953",
+  "file": "sx-18953.webp",
+  "title": "晨光水面",
+  "descr": "高端气泡水罐头海报，产品置于水面",
+  "category": "通用",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": false,
+  "fields": [],
+  "scene": "A high-end photorealistic beverage advertisement featuring the product, a can of sparkling water from the reference photo, standing vertically in the center on a shallow reflective water surface. The background is a serene neutral spa-style setting using neutral beige stone and plaster materials. Behind the product is a large circular stone arch or hollow design with soft ripples on the water creating a reflection of the product. To the right is a smooth oval beige pebble and a light dry plant branch extending from the top right corner with small seeds. The lighting is warm golden morning light with soft plant shadows cast onto the background wall and the product. This creates an elegant high-end product photography effect with shallow depth of field, natural highlights, a calm atmosphere, cream beige monochrome tone, realistic reflection effect, square composition, and no people in the image.",
+  "ratios": [
+   "1:1"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-16313",
+  "file": "sx-16313.webp",
+  "title": "水墨甜杯",
+  "descr": "水墨山水与金箔点缀的高端饮品海报",
+  "category": "食品",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：甜如初雪",
+    "max": 12
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：一杯甜，一座城",
+    "max": 14
+   }
+  ],
+  "scene": "Vertical luxury poster in a new-Chinese aesthetic. A warm ivory xuan-paper texture fills the background with generous negative space. Around and behind the product: soft ink-wash grey-black mountain silhouettes, a single brushstroke-like river curving from lower-left to upper-right with delicate gold-foil edges, a pale sun disc high in the centre, a tiny traditional pagoda on a ridge, drifting cloud lines, and blooming white plum branches along the right edge and lower-left corner. The product from the reference photo sits centre-lower on a subtle stone ledge, shot front-on at eye level under soft diffused light, with gentle reflections and a clean shadow; it stays completely unmodified and remains the hero. Palette of ivory, ink grey, warm beige and muted gold. Vertical {headline} and {sub} occupy the upper left; all other areas have no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": true,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-26222",
+  "file": "sx-26222.webp",
+  "title": "涂鸦混合",
+  "descr": "手绘涂鸦环绕真实产品，海报级构图",
+  "category": "通用",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：随手一瓶，活力加倍",
+    "max": 12
+   },
+   {
+    "key": "brand",
+    "label": "品牌名",
+    "placeholder": "例：LUMI",
+    "max": 10
+   }
+  ],
+  "scene": "A vertical campaign poster in a bright off-white studio. The product from the reference photo is photographed for real at the centre of the frame, kept exactly as it appears in the reference and fully unmodified, its true material and texture preserved, lit by clean soft studio light that casts one crisp grounded shadow. Around it, energetic black marker doodles swirl — arrows, tiny props, dotted motion lines, small abstract shapes — as if drawn by hand on the same page, never overlapping or altering the product itself. Real photography and flat drawing meet in sharp, playful contrast. Composition leaves clear zones at the top and bottom. {headline} sits at the top in bold elegant type, {brand} at the bottom in small caps; all other areas contain no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ },
+ {
+  "key": "sx-20228",
+  "file": "sx-20228.webp",
+  "title": "暖光生活",
+  "descr": "暖光居家场景，产品居中带货",
+  "category": "家居",
+  "purpose": "海报",
+  "mode": "simple",
+  "allowText": true,
+  "fields": [
+   {
+    "key": "headline",
+    "label": "主标题",
+    "placeholder": "例：慢煮一杯好咖啡",
+    "max": 12
+   },
+   {
+    "key": "sub",
+    "label": "副标题",
+    "placeholder": "例：把清晨交给它",
+    "max": 14
+   },
+   {
+    "key": "points",
+    "label": "卖点短语",
+    "placeholder": "例：定时 / 保温 / 易清洗",
+    "max": 24
+   }
+  ],
+  "scene": "Warm lifestyle scene on a light oak table beside a softly lit window: the product from the reference photo sits at the centre of a tidy, cosy domestic setting, kept exactly as photographed and unmodified, scaled accurately and treated as the hero. Supporting props — a linen cloth, a ceramic mug, a small green plant, a few dried flowers — sit back and to the sides at lower height, slightly out of focus. Soft golden morning light enters from the left, gentle shadows, low-saturation palette of cream, sage and oatmeal. Camera at a slightly three-quarter eye level, 50mm, shallow depth of field. Layout: {headline} large across the top with a handwritten-style {sub} beneath, two round feature badges with simple line icons floating left and right, {points} as short labels, and a small {brand} label at the bottom. All other areas are empty with no text.",
+  "ratios": [
+   "3:4"
+  ],
+  "featured": false,
+  "source": "水仙提示词库（经作者授权改写）"
+ }
+]

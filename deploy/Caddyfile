@@ -1,0 +1,49 @@
+# Lumi 出图 — Caddy reverse proxy (docker compose service `caddy`).
+# DOMAIN comes from .env (e.g. app.example.com). Caddy obtains/renews the HTTPS certificate
+# automatically once the DNS A record points here and ports 80/443 are open.
+# Local smoke test without a domain: DOMAIN=localhost (self-signed) or DOMAIN=:80 (plain http).
+
+{$DOMAIN} {
+	encode zstd gzip
+
+	request_body {
+		max_size 20MB
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "DENY"
+		# Only set when the upstream (Fastify helmet) did not send its own CSP.
+		?Content-Security-Policy "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+		-Server
+		-X-Powered-By
+	}
+
+	# API + signed local file URLs -> Node api. The client IP is set (not appended) so a
+	# spoofed X-Forwarded-For from the client is discarded; pair with TRUST_PROXY=1 in .env.
+	@backend path /api/* /files/*
+	handle @backend {
+		reverse_proxy api:8787 {
+			header_up X-Forwarded-For {remote_host}
+			header_up X-Real-IP {remote_host}
+		}
+	}
+
+	# Web SPA (built into the caddy image at /srv) with client-side routing fallback.
+	handle {
+		root * /srv
+		@hashed path /assets/*
+		header @hashed Cache-Control "public, max-age=31536000, immutable"
+		@shell not path /assets/*
+		header @shell Cache-Control "no-cache"
+		try_files {path} /index.html
+		file_server
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}

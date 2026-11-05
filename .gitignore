@@ -1,0 +1,16 @@
+node_modules
+dist
+data
+.env
+*.log
+vendor/*.tgz
+.env.*
+!.env.example
+models/
+*.onnx
+uploads/
+web/screenshots/
+docker-compose.override.yml
+*.pem
+id_*
+.ssh/

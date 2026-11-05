@@ -1,0 +1,131 @@
+# Lumi 出图 — production stack for a single Linux VPS.
+#
+#   cp .env.example .env   # fill it in (see deploy/README-deploy.md)
+#   docker compose up -d --build
+#
+# Only `caddy` publishes ports (80/443). postgres / redis / api are reachable only on the
+# internal compose network. Secrets live in .env (never commit it).
+
+x-app: &app
+  build:
+    context: .
+    target: runtime
+  image: lumi-app:local
+  env_file: .env
+  init: true   # tini as PID 1: forwards SIGTERM so `docker compose stop` is clean
+  environment:
+    NODE_ENV: production
+    # Composed here so the DB password lives in one place (POSTGRES_PASSWORD in .env).
+    DATABASE_URL: "postgres://lumi:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres:5432/lumi"
+    REDIS_URL: redis://redis:6379
+    STORAGE_LOCAL_DIR: /app/data/storage
+  volumes:
+    # Used when STORAGE_DRIVER=local. In production prefer STORAGE_DRIVER=s3 with a PRIVATE
+    # S3 / Cloudflare R2 bucket: survives server loss, no disk-full risk, easier to scale.
+    # If you stay on local storage, back up this volume too (pg_dump does not include images).
+    - appdata:/app/data
+  restart: unless-stopped
+  logging: &logging
+    driver: json-file
+    options: { max-size: "10m", max-file: "5" }
+
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: lumi
+      POSTGRES_DB: lumi
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}"
+    # Small-VPS friendly settings (2–4 GB RAM). Raise shared_buffers on bigger machines.
+    command: ["postgres", "-c", "shared_buffers=128MB", "-c", "max_connections=60", "-c", "log_min_duration_statement=2000"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lumi -d lumi"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    shm_size: 128mb
+    restart: unless-stopped
+    logging: *logging
+
+  redis:
+    image: redis:7-alpine
+    # BullMQ needs noeviction; AOF keeps queued jobs across restarts.
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec", "--maxmemory", "256mb", "--maxmemory-policy", "noeviction"]
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+    logging: *logging
+
+  api:
+    <<: *app
+    command: ["node", "server/dist/index.js"]   # runs DB migrations on boot
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8787/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits: { memory: 768m }
+
+  worker:
+    <<: *app
+    command: ["node", "server/dist/worker.js"]
+    depends_on:
+      api: { condition: service_healthy }   # wait until migrations have run
+    healthcheck:
+      disable: true
+    stop_grace_period: 60s   # let in-flight generation jobs finish
+    deploy:
+      resources:
+        limits: { memory: 1g }   # sharp image processing
+
+  cron:
+    <<: *app
+    command: ["node", "server/dist/cron.js"]   # retention + alert checks
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      disable: true
+    deploy:
+      resources:
+        limits: { memory: 384m }
+
+  caddy:
+    build:
+      context: .
+      target: caddy   # caddy:2-alpine + deploy/Caddyfile + built web SPA in /srv
+    image: lumi-caddy:local
+    environment:
+      DOMAIN: "${DOMAIN:?set DOMAIN in .env}"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"   # HTTP/3
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro   # edit + `docker compose restart caddy`
+      - caddy_data:/data       # certificates — keep this volume
+      - caddy_config:/config
+    depends_on:
+      api: { condition: service_healthy }
+    restart: unless-stopped
+    logging: *logging
+
+volumes:
+  pgdata: {}
+  redisdata: {}
+  appdata: {}
+  caddy_data: {}
+  caddy_config: {}
